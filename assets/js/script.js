@@ -59,18 +59,13 @@ var questions = [
 let qQuestion = 0;
 
 function showQuestions() {
-    // const quiz_question = document.querySelector(".quiz_question");
-    // let selectedQuestion = "<h2>" + question[0].question + "</h2>";
-    // quiz_question.innerHTML = selectedQuestion;
     let selectedQuestion = questions[qQuestion];
 
-    //for (var i=0; i<question.length; i++) {
     question.innerHTML = "<h2>" + selectedQuestion.question + "</h2>";
     optionA.innerHTML = selectedQuestion.optionA;
     optionB.innerHTML = selectedQuestion.optionB;
     optionC.innerHTML = selectedQuestion.optionC;
     optionD.innerHTML = selectedQuestion.optionD;
-    //}
 }
 
 start.addEventListener("click", startQuiz);
@@ -97,12 +92,14 @@ function countdown() {
     }, 1000)
 }
 
-//incorrect answer
+//next button 
 
 //check answer
-function checkAnswers(answer) {
-    if (answer === questions[q].answer) {
-        answer.innerHTML = "Correct!";
+function checkAnswers(clickedOption) {
+    // let clickedOption = document.querySelector("button[value=clicked" + + "]:")
+    let selectedQuestion = document.getElementById("button[id=clickedOption");
+    if (clickedOption === questions.selectedQuestion.answer) {
+        answer.textContent = "Correct!";
     } else {
         answer.innerHTML = "Wrong";
         count = count - 5;

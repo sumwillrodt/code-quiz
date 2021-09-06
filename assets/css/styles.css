@@ -72,11 +72,12 @@ body {
     padding: 10px 15px;
     font-size: 16pt;
     font-weight: 300;
+    text-transform: none;
     color: var(--white);
     background: var(--rpurple);
     border: 1px solid var(--lightpurple);
     border-radius: 5px;
-    text-transform: none;  
+    display: block;  
 }
 
 .container .options-list .option:hover {
