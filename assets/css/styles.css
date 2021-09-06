@@ -18,6 +18,7 @@ header button{
     color: #800080;
     background: none;
     text-transform: none;
+    border: none;
 }
 
 #timer {

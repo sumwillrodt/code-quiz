@@ -77,15 +77,16 @@ start.addEventListener("click", startQuiz);
 
 //Start Quiz
 function startQuiz() {
-    start.style.display = "none" //hide start block
+    welcome.style.display = "none" //hide start block
     countdown();
     showQuestions();
-    quiz.style.display = "block";
+    quiz.style.display = "block"; //show questions
 }
 
 //timer
+var timeLeft = 60;
+
 function countdown() {
-    var timeLeft = 60;
     var timeInterval = setInterval(function() {
         if (timeLeft > 0) {
             counterEl.innerHTML = timeLeft;
@@ -104,6 +105,6 @@ function checkAnswers(answer) {
         answer.innerHTML = "Correct!";
     } else {
         answer.innerHTML = "Wrong";
-        
+        count = count - 5;
     }
 }
